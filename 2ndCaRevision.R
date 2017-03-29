@@ -1,8 +1,9 @@
 
 # Exercise 1
 # a)
+library(readr)
 setwd("~/Desktop")
-cardiology <- read_csv("C:/Users/t00175569/Desktop/cardiology.csv")
+cardiology <- read_csv("C:/Users/Finbar/Desktop/r_ca/cardiology.csv")
 # b)
 View(cardiology)
 
@@ -46,11 +47,15 @@ boxplot(cardiology.sick$age,
 hist(cardiology.healthy$age,
      xlab = "Age Groups (5yr bins)",
      main = "Healthy Patient Ages",
-     ylab = "Number of Patients")
+     ylab = "Number of Patients",
+     ylim = c(0, 25))
 
 hist(cardiology.sick$age,
      xlab = "Age Groups (5yr bins)",
      main = "Sick Patient Ages",
      ylab = "Number of Patients")
 
+# looking at the historgram, we see that sick patients are generally older
+#  the IQR for healthy people is larger indicating a larger variance in patient age
 
+# G)
